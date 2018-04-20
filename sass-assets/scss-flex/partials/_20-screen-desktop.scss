@@ -1,0 +1,47 @@
+/* query for tablet devices */
+@media only screen
+and (min-width: 960px) {
+  .col2 {
+    img {
+      width: 100%;
+    }
+  }
+
+  .hero-title {
+
+    top: 210px;
+    z-index: 124;
+
+    h3 {
+      left: -40px;
+      font-size: 3rem;
+    }
+    h1 {
+      left: 30px;
+      font-size: 3rem;
+    }
+
+    .col2 {
+      img {
+        width: 100% !important;
+      }
+    }
+  }
+
+
+  div[class*="article-sm"] img {
+    float: left;
+    width: 100%;
+    // height: 220px;
+  }
+
+}
+
+
+.searchbox-desktop {
+  display: block;
+}
+
+.searchbox-mobile {
+  display: none;
+}

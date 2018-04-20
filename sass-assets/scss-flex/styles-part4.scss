@@ -1,0 +1,123 @@
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+}
+
+.canvas {
+  width: 100%;
+  height: 600px;
+  border: 1px solid lightgray;
+}
+
+.title {
+  font-family: Arial;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: darkgray;
+  padding: 5px 0;
+}
+
+footer {
+  margin-top: 80px;
+}
+
+.canvas {
+  background-image: url('/asset/img/extras/landscape01.jpg');
+}
+
+.land {
+  position: relative;
+  border-top: 5px solid lightgray;
+  background: #787878;
+  width: 100%;
+  height: 70px;
+  top: 530px;
+  z-index: 1;
+}
+
+.house img {
+  position: relative;
+  top: 330px;
+  left: 955px;
+  width: 250px;
+  z-index: 2;
+}
+
+#car-blink {
+  position: absolute;
+  top: -200px;
+ /* transform: translate(-100px,370px);*/
+  animation: car-blink-move 8s ease infinite;
+  animation-delay: 1s;
+  z-index: 10;
+}
+
+#car-blink-color {
+  fill: blue;
+  animation: car-blink-change-color 2s infinite;
+}
+
+#car-yellow {
+  position: absolute;
+  transform: translate(0px,400px);
+  animation: car-yellow-move 3s ease infinite;
+  z-index: 10;
+}
+
+.plane {
+  position: absolute;
+  animation: plane-move 3s infinite;
+  z-index: 15;
+}
+
+#sun {
+  position: absolute;
+  width: 150px;
+  margin: 50px;
+  display: block;
+  animation: sun-rotation 10s linear infinite;
+  .one {transition: fill 1s;}
+  .two{fill:#FFCE00;}
+  .one{fill:#ffb000;}
+  .middle{fill:#FFFF00;}
+}
+
+
+/*=========================== Keyframes ============================*/
+@keyframes plane-move {
+  0% { transform: translate(1050px, 300px) scale(0.5); }
+  50% { transform: translate(450px, 100px) scale(1);}
+  100% { transform: translate(-40px, 100px) scale(0.5);}
+}
+
+@keyframes sun-rotation {
+  from { transform: rotate(0deg);}
+  to { transform: rotate(360deg);}
+}
+
+@keyframes car-blink-move {
+  0% {transform: translate(0px,700px); }
+  70% { transform: translate(1055px,700px); }
+  80% { transform: translate(1020px,700px); }
+  90% { transform: translate(1030px,700px); }
+  100% { transform: translate(1050px,700px); }
+}
+
+@keyframes car-yellow-move {
+  0% { transform: translate(0px,400px);}
+  70% { transform: translate(990px,400px);}
+  100% { transform: translate(1000px,400px); }
+}
+
+@keyframes car-blink-change-color {
+  0% { fill: black;}
+  25% { fill: red; }
+  50% { fill: blue; }
+  75% { fill: #5b1114; }
+  100% { fill: black; }
+}
+
